@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота — HTML-форми</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b1220;
+            color: #e5e7eb;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4338ca, #2563eb);
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            color: white;
+        }
+
+        header p {
+            color: #dbeafe;
+        }
+
+        main {
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 0 18px;
+        }
+
+        .card {
+            background: #151f32;
+            border: 1px solid #29364d;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 22px;
+        }
+
+        h2 {
+            color: #93c5fd;
+        }
+
+        label {
+            display: block;
+            margin: 12px 0 5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #475569;
+            border-radius: 7px;
+            background: #0b1220;
+            color: white;
+            font-size: 15px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 8px;
+        }
+
+        .choice {
+            margin: 8px 0;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .result {
+            margin-top: 18px;
+            padding: 15px;
+            background: #202e45;
+            border-left: 4px solid #60a5fa;
+            border-radius: 7px;
+            overflow-wrap: anywhere;
+        }
+
+        .back {
+            display: inline-block;
+            color: #93c5fd;
+            text-decoration: none;
+            border: 1px solid #60a5fa;
+            padding: 10px 16px;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            color: #94a3b8;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <p>НАВЧАЛЬНИЙ ПРОЄКТ</p>
+    <h1>HTML-форми та JavaScript</h1>
+    <p>Введення, обробка та використання даних</p>
+</header>
+
+<main>
+
+    <section class="card">
+        <h2>1. Форма введення інформації</h2>
+        <p>Приклад використання текстових полів, списку та перемикачів.</p>
+
+        <form id="infoForm">
+            <label for="username">Ваше ім'я:</label>
+            <input type="text" id="username"
+                   placeholder="Введіть ім'я" required>
+
+            <label for="course">Курс навчання:</label>
+            <select id="course">
+                <option value="1">Перший курс</option>
+                <option value="2">Другий курс</option>
+                <option value="3">Третій курс</option>
+                <option value="4">Четвертий курс</option>
+            </select>
+
+            <p>Форма навчання:</p>
+
+            <div class="choice">
+                <label>
+                    <input type="radio" name="study"
+                           value="Денна" checked>
+                    Денна
+                </label>
+            </div>
+
+            <div class="choice">
+                <label>
+                    <input type="radio" name="study"
+                           value="Заочна">
+                    Заочна
+                </label>
+            </div>
+
+            <label for="comment">Коментар:</label>
+            <textarea id="comment" rows="3"
+                      placeholder="Ваш коментар"></textarea>
+
+            <button type="submit">Показати введені дані</button>
+        </form>
+
+        <div id="infoResult" class="result" hidden></div>
+    </section>
+
+    <section class="card">
+        <h2>2. Форма розрахунку вартості</h2>
+        <p>
+            Введіть ціну та кількість товарів.
+            JavaScript самостійно розрахує загальну суму.
+        </p>
+
+        <form id="calcForm">
+            <label for="price">Ціна одного товару (грн):</label>
+            <input type="number" id="price"
+                   min="0.01" max="100000000"
+                   step="0.01" value="500" required>
+
+            <label for="quantity">Кількість товарів:</label>
+            <input type="number" id="quantity"
+                   min="1" max="100000" step="1"
+                   value="2" required>
+
+            <label>
+                <input type="checkbox" id="discount">
+                Застосувати знижку 10%
+            </label>
+
+            <button type="submit">Розрахувати вартість</button>
+        </form>
+
+        <div id="calcResult" class="result" hidden></div>
+    </section>
+
+    <section class="card">
+        <h2>3. Перевірка віку</h2>
+        <p>Введіть вік, щоб отримати повідомлення.</p>
+
+        <form id="ageForm">
+            <label for="age">Ваш вік:</label>
+            <input type="number" id="age"
+                   min="1" max="120" step="1"
+                   placeholder="Наприклад, 18" required>
+
+            <button type="submit">Перевірити вік</button>
+        </form>
+
+        <div id="ageResult" class="result" hidden></div>
+    </section>
+
+    <section class="card">
+        <h2>Висновок</h2>
+        <p>
+            HTML-форми дають змогу отримувати інформацію від користувача.
+            JavaScript обробляє введені значення, виконує обчислення
+            та виводить результати без перезавантаження сторінки.
+        </p>
+    </section>
+
+    <a href="../index.html" class="back">
+        ← Повернутися до головної сторінки
+    </a>
+
+</main>
+
+<footer>
+    Лабораторна робота з HTML та JavaScript
+</footer>
+
+<script>
+    // Обробка форми з інформацією про користувача
+    document.getElementById("infoForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("username").value.trim();
+        const course = document.getElementById("course").value;
+        const study = document.querySelector('input[name="study"]:checked').value;
+        const comment = document.getElementById("comment").value.trim();
+
+        const result = document.getElementById("infoResult");
+
+        result.textContent =
+            "Ім'я: " + name +
+            ". Курс: " + course +
+            ". Форма навчання: " + study +
+            ". Коментар: " + (comment || "не вказано");
+
+        result.hidden = false;
+    });
+
+    // Розрахунок вартості замовлення
+    document.getElementById("calcForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const price = Number(document.getElementById("price").value);
+        const quantity = Number(document.getElementById("quantity").value);
+        const discount = document.getElementById("discount").checked;
+        const result = document.getElementById("calcResult");
+
+        if (!Number.isFinite(price) || price <= 0 ||
+            !Number.isInteger(quantity) || quantity < 1) {
+            result.textContent = "Введіть коректну ціну та кількість.";
+            result.hidden = false;
+            return;
+        }
+
+        const subtotal = price * quantity;
+        const total = discount ? subtotal * 0.9 : subtotal;
+
+        result.textContent =
+            "Сума без знижки: " + subtotal.toFixed(2) +
+            " грн. Знижка: " + (discount ? "10%" : "0%") +
+            ". До сплати: " + total.toFixed(2) + " грн.";
+
+        result.hidden = false;
+    });
+
+    // Перевірка введеного віку
+    document.getElementById("ageForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const age = Number(document.getElementById("age").value);
+        const result = document.getElementById("ageResult");
+
+        if (!Number.isInteger(age) || age < 1 || age > 120) {
+            result.textContent = "Введіть цілий вік від 1 до 120 років.";
+        } else if (age < 18) {
+            result.textContent = "Ви неповнолітній користувач.";
+        } else {
+            result.textContent = "Ви повнолітній користувач.";
+        }
+
+        result.hidden = false;
+    });
+</script>
+
+</body>
+</html>
