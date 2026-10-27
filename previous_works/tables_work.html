@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота — HTML-таблиці</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b1220;
+            color: #e5e7eb;
+            line-height: 1.7;
+        }
+
+        header {
+            padding: 50px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #064e3b, #059669);
+        }
+
+        header p {
+            color: #d1fae5;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: #151f32;
+            border: 1px solid #29364d;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 22px;
+        }
+
+        h1, h2 {
+            color: white;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 400px;
+            background: #111b2d;
+        }
+
+        th {
+            background: #047857;
+            color: white;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 15px;
+            border-bottom: 1px solid #334155;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #1e293b;
+        }
+
+        tbody tr:hover {
+            background: #254238;
+        }
+
+        code {
+            color: #6ee7b7;
+            font-size: 15px;
+        }
+
+        .back {
+            display: inline-block;
+            padding: 12px 20px;
+            border: 1px solid #34d399;
+            border-radius: 8px;
+            color: #6ee7b7;
+            text-decoration: none;
+        }
+
+        .back:hover {
+            background: #064e3b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <p>НАВЧАЛЬНИЙ ПРОЄКТ</p>
+    <h1>Лабораторна робота з HTML-таблиць</h1>
+    <p>Створення та оформлення табличних даних</p>
+</header>
+
+<main>
+
+    <section class="card">
+        <h2>Призначення HTML-таблиць</h2>
+        <p>
+            HTML-таблиці використовуються для впорядкованого
+            подання інформації у вигляді рядків і стовпців.
+            За допомогою CSS можна налаштувати їхні кольори,
+            рамки, відступи та ефекти наведення.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Основні HTML-теги таблиць</h2>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Тег</th>
+                        <th>Призначення</th>
+                        <th>Приклад використання</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td><code>&lt;table&gt;</code></td>
+                        <td>Створює таблицю</td>
+                        <td>Контейнер усіх рядків</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;tr&gt;</code></td>
+                        <td>Створює рядок</td>
+                        <td>Групує комірки</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;th&gt;</code></td>
+                        <td>Заголовок стовпця</td>
+                        <td>Назва поля</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;td&gt;</code></td>
+                        <td>Звичайна комірка</td>
+                        <td>Текст або число</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;thead&gt;</code></td>
+                        <td>Група заголовків</td>
+                        <td>Верхня частина таблиці</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;tbody&gt;</code></td>
+                        <td>Основний вміст</td>
+                        <td>Рядки з даними</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Висновок</h2>
+        <p>
+            HTML відповідає за структуру таблиці, а CSS —
+            за її зовнішній вигляд. Правильне оформлення
+            робить інформацію зрозумілою та зручною для читання.
+        </p>
+    </section>
+
+    <a href="../index.html" class="back">
+        ← Повернутися до головної роботи
+    </a>
+
+</main>
+
+<footer>
+    Навчальний HTML/CSS-проєкт
+</footer>
+
+</body>
+</html>
+

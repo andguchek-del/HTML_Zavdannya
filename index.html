@@ -176,3 +176,108 @@
 
 <h2 id="conclusion">4. Висновок</h2>
 <p>Комп'ютерні технології пройшли довгий шлях розвитку та стали важливою частиною сучасного суспільства.</p>
+
+<hr>
+
+<h2 id="navigation">Навігація та кнопки</h2>
+
+<p>За допомогою наведених нижче посилань можна переходити
+між розділами документа та відкривати інші сторінки.</p>
+
+<h3>1. Внутрішні посилання</h3>
+<a href="#history">Історія комп'ютерів</a> |
+<a href="#modern">Сучасні комп'ютери</a> |
+<a href="#top">На початок сторінки</a>
+
+<h3>2. Посилання на інші документи</h3>
+<p>
+    <a href="about.html">Відкрити додатковий HTML-документ</a>
+</p>
+
+<h3>3. Кнопка, створена власноруч</h3>
+<style>
+    .my-button {
+        background-color: #174a7e;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .my-button:hover {
+        background-color: #0d3155;
+    }
+
+    .generated-button {
+        background: linear-gradient(#43a047, #1b5e20);
+        color: white;
+        padding: 12px 24px;
+        border: 1px solid #1b5e20;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .generated-button:hover {
+        background: linear-gradient(#388e3c, #144d18);
+    }
+</style>
+
+<p>
+    <a class="my-button" href="about.html">
+        Перейти на іншу сторінку
+    </a>
+</p>
+
+<h3>4. Кнопка в стилі онлайн-генератора</h3>
+<p>
+    Цей стиль можна налаштувати за допомогою
+    <a href="https://www.bestcssbuttongenerator.com/"
+       target="_blank" rel="noopener noreferrer">
+        CSS Button Generator
+    </a>.
+</p>
+
+<p>
+    <a class="generated-button" href="#conclusion">
+        Перейти до висновку
+    </a>
+</p>
+
+<h3>5. Кнопка запуску JavaScript</h3>
+<p>Натисни кнопку, щоб запустити JavaScript-функцію.</p>
+
+<button type="button" class="my-button" onclick="showMessage()">
+    Запустити JavaScript
+</button>
+
+<p id="js-result"></p>
+
+<script>
+    function showMessage() {
+        document.getElementById("js-result").textContent =
+            "JavaScript працює! Кнопку натиснуто успішно.";
+    }
+</script>
+
+<h3>Посилання на попередні роботи</h3>
+
+<ul>
+    <li>
+        <a href="previous_works/css_work.html">
+            Лабораторна робота з CSS
+        </a>
+    </li>
+    <li>
+        <a href="previous_works/tables_work.html">
+            Лабораторна робота з HTML-таблиць
+        </a>
+    </li>
+</ul>
+
